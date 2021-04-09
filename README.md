@@ -5,7 +5,7 @@
 ## 一、安装与引用
 
 ```go
-go get github.com/yyyThree/zap@v1.0.0
+go get github.com/yyyThree/zap@v1.0.1
 import "github.com/yyyThree/zap"
 ```
 
