@@ -2,50 +2,50 @@ package zap
 
 type BaseMap map[string]interface{}
 
-func (log *log) Debug(msg string, data ...BaseMap) {
+func (logger *Logger) Debug(msg string, data ...BaseMap) {
 	if len(data) == 0 {
-		log.logger.Debugw(msg)
+		logger.logger.Debugw(msg)
 	} else {
-		log.logger.Debugw(msg, "data", data[0])
+		logger.logger.Debugw(msg, "data", data[0])
 	}
 }
 
-func (log *log) Info(msg string, data ...BaseMap) {
+func (logger *Logger) Info(msg string, data ...BaseMap) {
 	if len(data) == 0 {
-		log.logger.Infow(msg)
+		logger.logger.Infow(msg)
 	} else {
-		log.logger.Infow(msg, "data", data[0])
+		logger.logger.Infow(msg, "data", data[0])
 	}
 }
 
-func (log *log) Warn(msg string, data ...BaseMap) {
+func (logger *Logger) Warn(msg string, data ...BaseMap) {
 	if len(data) == 0 {
-		log.logger.Warnw(msg)
+		logger.logger.Warnw(msg)
 	} else {
-		log.logger.Warnw(msg, "data", data[0])
+		logger.logger.Warnw(msg, "data", data[0])
 	}
 }
 
-func (log *log) Error(msg string, data ...BaseMap) {
+func (logger *Logger) Error(msg string, data ...BaseMap) {
 	if len(data) == 0 {
-		log.logger.Errorw(msg)
+		logger.logger.Errorw(msg)
 	} else {
-		log.logger.Errorw(msg, "data", data[0])
+		logger.logger.Errorw(msg, "data", data[0])
 	}
 }
 
-func (log *log) Panic(msg string, data ...BaseMap) {
+func (logger *Logger) Panic(msg string, data ...BaseMap) {
 	if len(data) == 0 {
-		log.logger.Panicw(msg)
+		logger.logger.Panicw(msg)
 	} else {
-		log.logger.Panicw(msg, "data", data[0])
+		logger.logger.Panicw(msg, "data", data[0])
 	}
 }
 
-func (log *log) Fatal(msg string, data ...BaseMap) {
+func (logger *Logger) Fatal(msg string, data ...BaseMap) {
 	if len(data) == 0 {
-		log.logger.Fatalw(msg)
+		logger.logger.Fatalw(msg)
 	} else {
-		log.logger.Fatalw(msg, "data", data[0])
+		logger.logger.Fatalw(msg, "data", data[0])
 	}
 }

@@ -31,16 +31,16 @@ type Config struct {
 	LogDir string      // 日志存储文件夹，默认为 log
 }
 
-type log struct {
+type Logger struct {
 	logger *zap.SugaredLogger
 }
 
-func New(config ...Config) *log {
+func New(config ...Config) *Logger {
 	c := Config{}
 	if len(config) > 0 {
 		c = config[0]
 	}
-	return &log{
+	return &Logger{
 		logger: getLogger(c),
 	}
 }
