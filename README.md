@@ -42,7 +42,7 @@ import "github.com/yyyThree/zap"
     logger := zap.New(zap.Config{
         Env:    zap.EnvDebug,
         Writer: zap.WriterRedis,
-            Redis: zap.RedisConfig{
+        Redis: zap.RedisConfig{
             Host:     "127.0.0.1",
             Port:     8003,
             RedisKey: "go-test",
