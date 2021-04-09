@@ -43,7 +43,7 @@ import "github.com/yyyThree/zap"
         Env:    zap.EnvDebug,
         Writer: zap.WriterRedis,
             Redis: zap.RedisConfig{
-            Host:     "192.168.3.53",
+            Host:     "127.0.0.1",
             Port:     8003,
             RedisKey: "go-test",
         },
@@ -54,7 +54,7 @@ import "github.com/yyyThree/zap"
 5. 配置项（`zap.Config`）说明
     1. Env：运行环境，debug/production，默认为 production。
        
-        *debug模式运行时所有日志及堆栈信息均会被写入，production模式运行时仅Info及以上级别的日志会被写入，仅Error及以上的日志会记录堆栈信息*
+        *debug模式运行时所有日志及堆栈信息均会被写入，production模式运行时仅Info及以上级别的日志会被写入，仅Error及以上的日志会记录堆栈信息。*
     2. Writer：日志写入方式 stdout/file/redis 默认为 file
     3. Redis：redis 配置，Writer = redis 时必传
         1. Host
@@ -63,7 +63,7 @@ import "github.com/yyyThree/zap"
         4. Password（非必须）
         5. Db（非必须）
         6. RedisKey：redis列表写入的key前缀
-    4. LogDir：日志存储文件夹，默认为 log
+    4. LogDir：日志存储文件夹地址，默认为 log
     
 6. 多种日志记录方法
     1. Debug

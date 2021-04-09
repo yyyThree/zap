@@ -26,7 +26,7 @@ func TestLogRedis(t *testing.T) {
 		Env:    zap.EnvDebug,
 		Writer: zap.WriterRedis,
 		Redis: zap.RedisConfig{
-			Host:     "192.168.3.53",
+			Host:     "127.0.0.1",
 			Port:     8003,
 			RedisKey: "go-test",
 		},
